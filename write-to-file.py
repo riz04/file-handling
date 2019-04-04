@@ -19,9 +19,13 @@
 
 # Opening a file, if it's not there, a new file witht the given name will be created
 newfile = open("phonebook.csv", "a+")
+
 # When you opwn file in append mode, it reads the whole file and goes to the last (so that you can add new data instead of overitting the old data), hence we need to use fileobject.seek() if we want to print the contents of the file
 newfile.seek(0)
+
 # fileobject.readline() function is used to read the file line by line
-print(newfile.readline())
+# fileobject.readlines() function is used to get all the lines of a file in the form of a list
+print(newfile.readlines())
+
 # finally close the file
 newfile.close()
