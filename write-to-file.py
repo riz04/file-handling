@@ -8,3 +8,20 @@
 
 # To read from/write to a file in Python first we have to open it using the in-built open() function
 # Never forget to close the file, else it will stay in the memory(RAM)
+
+# Let's make a file to store the name and mobile number of users (A phonebook app)
+
+# Step I: Create a file (using open() function to open a file, if it's not there, a new file will be created)
+# Step II: We'll using the 'a+' mode because we have to use the same file to store data of multiple users
+# Step III: Write the Name & Mobile number of the user to the file
+# Step IV: Save the file
+# Step V: Read the data from the file and simply print it to the console
+
+# Opening a file, if it's not there, a new file witht the given name will be created
+newfile = open("phonebook.csv", "a+")
+# When you opwn file in append mode, it reads the whole file and goes to the last (so that you can add new data instead of overitting the old data), hence we need to use fileobject.seek() if we want to print the contents of the file
+newfile.seek(0)
+# fileobject.readline() function is used to read the file line by line
+print(newfile.readline())
+# finally close the file
+newfile.close()
