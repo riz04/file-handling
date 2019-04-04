@@ -25,7 +25,11 @@ newfile.seek(0)
 
 # fileobject.readline() function is used to read the file line by line
 # fileobject.readlines() function is used to get all the lines of a file in the form of a list
-print(newfile.readlines())
+all_lines = newfile.readlines()
+
+# print line by line
+for line in all_lines:
+    print(line)
 
 # finally close the file
 newfile.close()
