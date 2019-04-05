@@ -15,6 +15,10 @@ while True:
     phone_book = open("phonebook.csv", "a+")
 
     # appending in the file
+    # we need to pass placeholders, i.e
+    # %s to accept the string(name)
+    # %d to accept the digits(mobile number)
+    # a % sign to create division, because comma will separate values and write() only takes one argument
     phone_book.write("\n%s, %d" % (name, mobile_no))
 
     should_continue = input("Dou you want to continue? (Y/N)")
