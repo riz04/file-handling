@@ -23,5 +23,6 @@ while True:
 
     should_continue = input("Dou you want to continue? (Y/N)")
     if (should_continue == "N" or should_continue == "n"):
+        phone_book.close()
         break
 print("You opt to exit the program")
