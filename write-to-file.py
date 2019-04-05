@@ -21,6 +21,7 @@
 newfile = open("phonebook.csv", "a+")
 
 # writing in a file
+# using backslash n to add data in a new line in the file
 
 newfile.write("\nriz, 88888888")
 newfile.write("\nram, 89898888")
